@@ -1,0 +1,53 @@
+PART 1
+
+1) git clean is used to remove untracked or unmerged files from the working directory
+
+2) -d allows you to remove untracked directories as well as files, -f forces deletion of files and directories
+
+3) git checkout -b
+
+4) A fast forward merge acts chronologically, a recursive merge happens when it is not apparent in what order different commits happened on different branches
+
+5) git checkout BRANCH_NAME
+
+6) git checkout -- FILE_NAME
+
+7) git branch -D BRANCH_NAME
+
+8) git diff shows changes in the working tree not yet staged for next commit
+
+9) git rm --cached FILE_NAME or git reset HEAD FILE_NAME
+
+10) Merge conflicts happen when different changes are made to the same file name on different branches and then an attempt is made to merge the branches
+
+
+PART 2
+
+➜  merge_conflict git:(master) cat second.txt
+second
+➜  merge_conflict git:(master) git checkout branch
+Switched to branch 'branch'
+➜  merge_conflict git:(branch) echo Third > second.txt
+➜  merge_conflict git:(branch) ✗ git add .
+➜  merge_conflict git:(branch) ✗ git commit -m "Adding second.txt to branch"
+[branch 17df83c] Adding second.txt to branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 second.txt
+➜  merge_conflict git:(branch) git checkout master
+Switched to branch 'master'
+➜  merge_conflict git:(master) git merge branch
+Auto-merging second.txt
+CONFLICT (add/add): Merge conflict in second.txt
+Automatic merge failed; fix conflicts and then commit the result.
+➜  merge_conflict git:(master) ✗ cat second.txt
+<<<<<<< HEAD
+second
+=======
+Third
+>>>>>>> branch
+➜  merge_conflict git:(master) ✗ open second.txt 
+
+(Edited second.txt in text editor)
+
+➜  merge_conflict git:(master) ✗ git add .
+➜  merge_conflict git:(master) ✗ git commit -m "fixing merge conflict" 

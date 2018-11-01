@@ -1,0 +1,138 @@
+
+PART 1:
+
+1) 
+➜  Desktop mkdir Local
+➜  Desktop cd Local
+➜  Local git init
+Initialized empty Git repository in /Users/nickfriedland 1/Desktop/Local/.git/
+➜  Local git:(master) touch example.txt
+➜  Local git:(master) ✗ touch example2.txt
+➜  Local git:(master) ✗ echo this is the first example file > example.txt
+➜  Local git:(master) ✗ echo some other stuff > example2.txt
+➜  Local git:(master) ✗ git add .
+➜  Local git:(master) ✗ git commit -m "Added example.txt and example2.txt"
+[master (root-commit) 66f84c2] Added example.txt and example2.txt
+ 2 files changed, 2 insertions(+)
+ create mode 100644 example.txt
+ create mode 100644 example2.txt
+
+2) 
+➜  Local git:(master) git remote add origin git@github.com:hotsoup6891/first_repo.git
+➜  Local git:(master) git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 313 bytes | 313.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/hotsoup6891/first_repo/pull/new/master
+remote: 
+To github.com:hotsoup6891/first_repo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+3) 
+➜  Desktop git clone git@github.com:hotsoup6891/git_practice.git
+Cloning into 'git_practice'...
+remote: Enumerating objects: 6, done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 6
+Receiving objects: 100% (6/6), done.
+➜  git_practice git:(master) echo Fine and dandy > README.md
+➜  git_practice git:(master) ✗ git add .
+➜  git_practice git:(master) ✗ git commit -m "Updated README file"
+[master dd948f5] Updated README file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+➜  git_practice git:(master) git push              
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 270 bytes | 270.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:hotsoup6891/git_practice.git
+   ef403a7..dd948f5  master -> master
+
+4)
+➜  git_practice git:(master) git checkout -b new_branch
+Switched to a new branch 'new_branch'
+➜  git_practice git:(new_branch) touch new_file.txt
+➜  git_practice git:(new_branch) ✗ git add .
+➜  git_practice git:(new_branch) ✗ git commit -m "Added new file"
+[new_branch 0fbe34f] Added new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new_file.txt
+➜  git_practice git:(new_branch) git push
+fatal: The current branch new_branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin new_branch
+
+➜  git_practice git:(new_branch) git push --set-upstream origin new_branch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'new_branch' on GitHub by visiting:
+remote:      https://github.com/hotsoup6891/git_practice/pull/new/new_branch
+remote: 
+To github.com:hotsoup6891/git_practice.git
+ * [new branch]      new_branch -> new_branch
+Branch 'new_branch' set up to track remote branch 'new_branch' from 'origin'.
+
+5) 
+Done
+
+PART 2
+
+➜  clmystery git:(master) ✗ echo "Jeremy Bowers" | $(command -v md5 || command -v md5sum) | grep -qif /dev/stdin encoded && echo CORRECT\! GREAT WORK, GUMSHOE. || echo SORRY, TRY AGAIN.
+
+CORRECT! GREAT WORK, GUMSHOE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

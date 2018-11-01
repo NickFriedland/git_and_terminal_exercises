@@ -1,0 +1,54 @@
+
+PART 1
+
+1) export FIRST_NAME=Nick
+
+2) echo $FIRST_NAME
+
+3) echo $PATH
+
+4) $PATH variable is the value of PATH, which is a list of executable programs that the shell can recognize and access at all times
+
+5) An env variable is helpful to create if there is a program that needs to be run or accessed often. Path ensures it can be accessed easily
+
+6) Save them in your .bash_profile or .zshrc
+
+7) A process is a program on my computer that is currently being run
+
+8) ps aux
+
+9) PID is the process ID of a given process that is currently running
+
+10) kill + PID
+
+11) kill communicates with a process to stop running, kill -9 is an overwriting kill function to shut down a process that is non-responsive no matter what
+
+12) grep -i
+
+13) grep -B
+
+14) grep -C
+
+15) grep -A
+
+16) grep -w
+
+17) grep -n
+
+
+
+PART 2
+
+1) find ~/Desktop -name "learn"
+
+2) find ~/Desktop -name "P.*"
+
+3) find ~/Desktop -name "*.txt"
+
+4) find ~/Desktop/views -name "*data*"
+
+5) grep -wc "Elie" instructors.txt
+
+6) grep -w "P.*" instructors.txt
+
+7) grep -niw "z.*" instructors.txt

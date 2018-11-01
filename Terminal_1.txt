@@ -1,0 +1,43 @@
+
+PART 1
+
+1) mkdir first 
+
+2) cd first
+
+3) touch person.txt
+
+4) mv person.txt another.txt
+
+5) cp another.txt copy.txt
+
+6) rm copy.txt
+
+7) cp -r first second
+
+8) rm -rf second
+
+
+PART 2
+
+1) man command shows the user manual for a given command. Scroll using arrow keys, exit out with 'q'
+
+2) The 'l' flag gives a longer version of the list, supplying more info. The 'a' flag includes files that begin with a '.' or hidden files/folders
+
+6) Jump between words with OPT + rt arrow or lt arrow
+
+7) CMD + E
+
+8) CMD + A
+
+9) CMD + W or OPT + DEL
+
+10) The shell is the program that actually runs functions and operations on the computer, terminal is the UI wrapper that we use to interact with shell
+
+11) Absolute path is the entire path from home to get to a given dir or file
+
+12) Relative path is the shorter address of wherever you are currently or wherever you want to interact
+
+13) A flag is an option that qualifies a given command. We have used -l to show a long version of list, -a which includes files that begin with a '.' and -R which acts on a directory reclusively
+
+14) The r flag ensures that changes made to the directory are made reclusively to all subordinate directories and files, the f flag overwrites any errors and makes sure change command completes.
